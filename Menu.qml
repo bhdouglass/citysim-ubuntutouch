@@ -76,7 +76,7 @@ Rectangle {
         }
     }
 
-    Button {
+    /*Button {
         id: load
         visible: CitySim.canLoad && gameHolder == null
         text: "Load Game"
@@ -91,7 +91,7 @@ Rectangle {
             loadSavedGame = true;
             menu = false;
         }
-    }
+    }*/
 
     Text {
         id: menuText
@@ -99,12 +99,13 @@ Rectangle {
         color: UbuntuColors.darkAubergine
         anchors {
             margins: units.gu(2)
-            top: load.visible ? load.bottom : menuStart.bottom
+            //top: load.visible ? load.bottom : menuStart.bottom
+            top: menuStart.bottom
             horizontalCenter: parent.horizontalCenter
         }
     }
 
-    Button {
+    /*Button {
         id: menuSave
         text: "Save the game"
         visible: mainView.gameHolder == null ? false : true
@@ -124,7 +125,7 @@ Rectangle {
                 text: "You game has been saved!"
             })
         }
-    }
+    }*/
 
     Button {
         id: menuShowViability
@@ -133,7 +134,8 @@ Rectangle {
         gradient: UbuntuColors.greyGradient
         anchors {
             margins: units.gu(2)
-            top: menuSave.bottom
+            //top: menuSave.bottom
+            top: menuText.bottom
             horizontalCenter: parent.horizontalCenter
         }
 
